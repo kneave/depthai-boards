@@ -1,0 +1,56 @@
+{
+    "board_config": {
+        "name": "FFC-3P",
+        "revision": "R1M0E1",
+        "cameras": {
+            "CAM_A": {
+                "name": "rgb",
+                "hfov": 69,
+                "type": "color",
+                "lens": "perspective",
+                "extrinsics": {
+                    "to_cam": "CAM_C",
+                    "specTranslation": {
+                        "x": -2.85,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "CAM_B": {
+                "name": "left",
+                "hfov": 180,
+                "type": "color",
+                "lens": "fisheye",
+                "extrinsics": {
+                    "to_cam": "CAM_C",
+                    "specTranslation": {
+                        "x": -5.7,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotation": {
+                        "r": 0,
+                        "p": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "CAM_C": {
+                "name": "right",
+                "hfov": 180,
+                "type": "color",
+                "lens": "fisheye"
+            }
+        },
+        "stereo_config": {
+            "left_cam": "CAM_B",
+            "right_cam": "CAM_C"
+        }
+    }
+}
